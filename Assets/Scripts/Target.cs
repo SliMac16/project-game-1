@@ -28,7 +28,7 @@ public class Target : MonoBehaviour
     {
         targetRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
-        playerH = GameObject.Find("Player").GetComponent<Health>();
+        playerH = GameObject.Find("Game Manager").GetComponent<Health>();
 
 
 

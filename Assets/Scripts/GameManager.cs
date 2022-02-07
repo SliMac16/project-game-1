@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        playerH = GameObject.Find("Player").GetComponent<Health>();
+        playerH = GetComponent<Health>();
     }
 
     // Update is called once per frame
