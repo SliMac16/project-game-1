@@ -24,7 +24,7 @@ public class Background : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-            if (transform.position.x > startPos.x + 60)
+            if (transform.position.x > startPos.x + 40)
             {
                 transform.position = startPos;
             }

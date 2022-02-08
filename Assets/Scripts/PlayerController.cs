@@ -11,13 +11,17 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem rockHit;
     private Health playerH;
     public float speed = 10.0f;
-    
 
+    private void Awake()
+    {
+        fishEat.Stop();
+        rockHit.Stop();
+    }
     // Start is called before the first frame update
     void Start()
     {
         playerH = GameObject.Find("Player").GetComponent<Health>();
-
+        
     }
 
     // Update is called once per frame
@@ -38,9 +42,21 @@ public class PlayerController : MonoBehaviour
 
         
     }
-    
-    
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!gameObject.CompareTag("bad"))
+        {
+            fishEat.Play();
+
+        }
+        else if (gameObject.CompareTag("bad"))
+        {
+            rockHit.Play();
+
+        }
+    }
 
 
 }
