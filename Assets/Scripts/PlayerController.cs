@@ -8,14 +8,14 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
     private GameObject player;
     public ParticleSystem fishEat;
-    public ParticleSystem rockHit;
+    
     private Health playerH;
     public float speed = 10.0f;
 
     private void Awake()
     {
         fishEat.Stop();
-        rockHit.Stop();
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -51,11 +51,7 @@ public class PlayerController : MonoBehaviour
             fishEat.Play();
 
         }
-        else if (gameObject.CompareTag("bad"))
-        {
-            rockHit.Play();
-
-        }
+        
     }
 
 
